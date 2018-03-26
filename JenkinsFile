@@ -15,7 +15,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cp ./HolaMundo /tmp/HolaMundo'
+                sh 'cp ./HolaMundo.class /tmp/HolaMundo.class'
+                sh 'cd /tmp;java HolaMundo'
             }
         }
     }
