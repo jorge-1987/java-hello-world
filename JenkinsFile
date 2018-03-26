@@ -8,14 +8,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                withMaven(maven : 'maven_3_3_9') {
-                  sh 'mvn test'
-              }
+                  sh 'echo "test"'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'cp HolaMundo /tmp/HolaMundo'
+                sh 'cp ./HolaMundo /tmp/HolaMundo'
             }
         }
     }
