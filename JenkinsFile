@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
+                sh 'echo "Starting compile"'
                 sh 'javac ./HolaMundo.java'
+                sh 'echo "End compile"'
             }
         }
         stage('Test') {
